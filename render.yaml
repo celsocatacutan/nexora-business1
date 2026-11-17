@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: nexora-business
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: nexora-database
+          property: connectionString
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: CSRF_SECRET
+        generateValue: true
+      - key: TRUST_PROXY
+        value: "1"
+
+databases:
+  - name: nexora-database
+    plan: free
+    region: singapore
+    databaseName: nexora
+    user: nexora
+    postgresMajorVersion: "17"
