@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Nexora Business Solutions">
+  <meta name="theme-color" content="#101827">
+  <title>Nexora | Business Solutions</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+<header>
+  <a class="logo" href="#home">NEXORA</a>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="account">
+    <button id="loginNav" class="secondary">Login</button>
+    <button id="registerNav">Register</button>
+    <button id="logoutBtn" class="secondary hidden">Logout</button>
+  </div>
+</header>
+
+<main>
+  <section id="home" class="hero">
+    <span class="tag">BUSINESS SOLUTIONS</span>
+    <h1>Your Business.<br><span>Your Digital Future.</span></h1>
+    <p>Modern digital solutions for businesses
+       that want to grow and succeed.</p>
+    <a href="#services" class="button">Explore Services</a>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Nexora</h2>
+    <p>We help businesses build a stronger
+       digital presence through modern technology
+       and reliable solutions.</p>
+  </section>
+
+  <section id="services" class="section light">
+    <h2>Our Services</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>Web Development</h3>
+        <p>Professional and responsive websites.</p>
+      </article>
+      <article class="card">
+        <h3>Business Solutions</h3>
+        <p>Digital tools for business growth.</p>
+      </article>
+      <article class="card">
+        <h3>Website Security</h3>
+        <p>Security-conscious web development.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Send us a message and our team will
+       get back to you.</p>
+
+    <form id="contactForm">
+      <label>Your name
+        <input name="name" required maxlength="100">
+      </label>
+      <label>Email
+        <input name="email" type="email" required maxlength="254">
+      </label>
+      <label>Subject
+        <input name="subject" required maxlength="150">
+      </label>
+      <label>Message
+        <textarea name="message" required minlength="10"
+          maxlength="5000"></textarea>
+      </label>
+      <button type="submit">Send Message</button>
+      <p id="contactResult" class="result" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <section id="account" class="section light hidden">
+    <h2 id="accountTitle">Account</h2>
+
+    <form id="registerForm" class="hidden">
+      <label>Full name
+        <input name="name" required maxlength="100">
+      </label>
+      <label>Email
+        <input name="email" type="email" required maxlength="254">
+      </label>
+      <label>Password (minimum 12 characters)
+        <input name="password" type="password"
+          minlength="12" maxlength="72" required>
+      </label>
+      <button type="submit">Create Account</button>
+    </form>
+
+    <form id="loginForm" class="hidden">
+      <label>Email
+        <input name="email" type="email" required>
+      </label>
+      <label>Password
+        <input name="password" type="password" required>
+      </label>
+      <button type="submit">Login</button>
+    </form>
+
+    <p id="accountResult" class="result"
+       aria-live="polite"></p>
+  </section>
+
+  <section id="userPanel" class="section light hidden">
+    <h2>My Account</h2>
+    <p id="welcome"></p>
+    <p>Your account is active.</p>
+  </section>
+
+  <section id="adminPanel" class="section hidden">
+    <h2>Administrator Dashboard</h2>
+    <p>Welcome, administrator.</p>
+
+    <div class="cards">
+      <article class="card">
+        <h3>Total Users</h3>
+        <p id="totalUsers">0</p>
+      </article>
+      <article class="card">
+        <h3>Total Messages</h3>
+        <p id="totalMessages">0</p>
+      </article>
+      <article class="card">
+        <h3>New Messages</h3>
+        <p id="newMessages">0</p>
+      </article>
+    </div>
+
+    <h3>Registered Users</h3>
+    <div id="usersList" class="table-wrap"></div>
+
+    <h3>Contact Messages</h3>
+    <div id="messagesList" class="table-wrap"></div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 Nexora Business Solutions.</p>
+  <p>Built with security in mind.</p>
+</footer>
+</body>
+</html>
